@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Clock - Experience the power of JS date API</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Asap+Condensed&family=Cabin+Condensed&family=Dancing+Script&family=Jost&family=Kalam&family=Kanit&family=Noto+Sans+Display:wght@600&family=Odibee+Sans&family=PT+Sans+Narrow&family=Sansita+Swashed:wght@300..900&family=Slabo+27px&family=Syne:wght@400..800&family=Ubuntu:wght@500&family=Yesteryear&display=swap');
+    </style>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Jost", serif;
+
+        }
+
+        .main_Page {
+            background: linear-gradient(rgb(0, 0, 0, 0.4), rgb(0, 0, 0, 0.2)),
+                url(https://images.unsplash.com/photo-1472214103451-9374bd1c798e?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fG5hdHVyZXxlbnwwfDB8MHx8fDA%3D) no-repeat center center/cover;
+            display: grid;
+            place-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .clock_Body {
+            display: flex;
+            text-align: center;
+            font-size: 1.5rem;
+            margin: 0 10px;
+        }
+
+        .clock_Body > div {
+            background: rgba(16, 16, 141, 0.8);
+            margin: 0 10px;
+            color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        #AM_PM {
+            position: relative;
+            top: 65px;
+            color: #fff;
+        }
+
+        @media screen and (min-width: 0) and (max-width: 750px) {
+            *{
+                overflow: hidden;
+            }
+            .clock_Body > div{
+                padding: 10px;
+                margin: 0 5px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main_Page">
+        <!-- <h2>My Digital Clock</h2> -->
+        <div class="clock_Body">
+            <div class="hours_div">
+                <p id="hours">00</p>
+                <span>Hours</span>
+            </div>
+            <div class="minutes_Div">
+                <p id="Minutes">00</p>
+                <span>Minutes</span>
+            </div>
+            <div class="seconds_Div">
+                <p id="seconds">00</p>
+                <span>Seconds</span>
+            </div>
+            <small id="AM_PM"></small>
+
+            <!-- <div class="Am_PM"> -->
+            <!-- </div> -->
+        </div>
+        <p id="day_Month_year"></p>
+    </div>
+</body>
+<script src="js/index.js"></script>
+
+</html>
